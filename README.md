@@ -70,8 +70,3 @@ const response = await axios.get(
   - `styles/`
     - `News.css` - CSS styles for the News component.
     - `article.css` - CSS styles for the Article component.
-
-
-### Contact
-
-For any questions or issues, please contact [your-email@example.com](mailto:your-email@example.com).
