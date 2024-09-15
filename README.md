@@ -1,70 +1,77 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# AI Technology News App
 
-## Available Scripts
+## Overview
 
-In the project directory, you can run:
+The AI Technology News App is a React-based application that provides up-to-date news about AI and technology. It fetches news articles from an external API, caches them locally, and allows users to view details of each article. The app also handles filtering out articles with certain titles and manages content rendering efficiently.
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Fetches news articles from the News API.
+- Caches news data in local storage to improve performance.
+- Displays articles with titles, images, and a "Read More" button.
+- View detailed content of articles in a separate view.
+- Basic styling for a clean and responsive design.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technologies Used
 
-### `npm test`
+- **React**: Front-end library for building user interfaces.
+- **Axios**: HTTP client for making API requests.
+- **React Router**: Routing library for navigation.
+- **CSS**: Styling for the application.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Getting Started
 
-### `npm run build`
+### Prerequisites
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Node.js and npm installed on your local machine.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Installation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/driessens-lucas/ai-news-react-app.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd ai-news-react-app
+   ```
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-### `npm run eject`
+### Running the App
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Start the development server:
+   ```bash
+   npm start
+   ```
+2. Open your browser and go to `http://localhost:3000` to see the app in action.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### API Key
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+To fetch news articles, you'll need an API key from [News API](https://newsapi.org/). Replace `YOUR_API_KEY` in the `.env` file with your actual API key.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```javascript
+const response = await axios.get(
+  `https://newsapi.org/v2/everything?q=ai+technology&apiKey=YOUR_API_KEY`
+);
+```
 
-## Learn More
+### Directory Structure
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- `src/`
+  - `components/` - Contains React components.
+    - `News.js` - Component for displaying a list of news articles.
+    - `Article.js` - Component for displaying a detailed view of a single article.
+  - `App.js` - Main application component and routing configuration.
+  - `index.js` - Entry point for the React application.
+  - `styles/`
+    - `News.css` - CSS styles for the News component.
+    - `article.css` - CSS styles for the Article component.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+### Contact
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+For any questions or issues, please contact [your-email@example.com](mailto:your-email@example.com).

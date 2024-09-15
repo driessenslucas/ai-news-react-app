@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import './News.css'; // Import the updated CSS file
-import './article.css'; // Assuming this is for article-specific styles
+import '../styles/News.css'; // Import the updated CSS file
 
 const CACHE_KEY = 'cachedNews'; // Key for localStorage
 const CACHE_EXPIRATION_TIME = 60 * 60 * 1000; // 1 hour in milliseconds
