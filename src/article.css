@@ -88,3 +88,8 @@
 .article-container a:hover {
     text-decoration: underline;
 }
+img{
+    width: 100%;
+    height: auto;
+    max-height: 650px;
+}

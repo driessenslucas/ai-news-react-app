@@ -29,7 +29,7 @@ const News = () => {
     const fetchNews = async () => {
       try {
         const response = await axios.get(
-          `https://newsapi.org/v2/everything?q=ai+technology&apiKey=` + process.env.REACT_APP_API_KEY
+          `https://newsapi.org/v2/everything?q=technology&apiKey=` + process.env.REACT_APP_API_KEY
         );
         const fetchedNews = response.data.articles;
 
@@ -60,9 +60,9 @@ const News = () => {
 
   return (
     <div className="newspaper">
-      <header className="header">
-        <h1 className="newspaper-title">Newpost York</h1>
-        <p className="newspaper-subtitle">York, MA - Thursday August 30, 1978 - Seven Pages</p>
+      <header className="newspaper-header">
+        <h1 className="newspaper-title">AI NEWS</h1>
+        {/* <p className="newspaper-subtitle">York, MA - Thursday August 30, 1978 - Seven Pages</p> */}
       </header>
       {/* <section>
         <div className="weatherforcastbox">

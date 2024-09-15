@@ -82,7 +82,7 @@ const Article = () => {
     <div className="article-container">
       <button onClick={() => navigate(-1)}>Go Back</button>
       <h1>{article.title}</h1>
-      <img src={article.urlToImage} alt="News" style={{ width: '60%', height: 'auto' }} />
+      <img src={article.urlToImage} alt="News" style={{ width: '100%', height: 'auto' }} />
       <div
         className="article-content"
         dangerouslySetInnerHTML={{ __html: formattedContent }}

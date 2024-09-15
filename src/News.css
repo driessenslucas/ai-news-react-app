@@ -115,6 +115,26 @@ button {
     font-weight: bold;
 }
 
+.newspaper-header{
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    font-size: 80px;
+    text-transform: uppercase;
+    display: inline-block;
+    line-height: 72px;
+    text-align: center;
+    padding: 20px;
+    border-bottom: 2px solid #2f2f2f;
+    background-color: #000;
+    color: #fff;
+    /* position: relative; */
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+
+    display: flex;
+
+}
 button:hover {
     background-color: #333333;
     border-color: #333;
