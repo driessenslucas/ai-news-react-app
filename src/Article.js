@@ -14,24 +14,26 @@ const stripHtmlTags = (html) => {
       links.push({ url, linkText });
       return `{{link_${linkCounter++}}}`;
     })
-    .replace(/<br\s*\/?>/gi, '<br>')
-    .replace(/<div.*?>/gi, '<br>')
-    .replace(/<p.*?>/gi, '<br>')
-    .replace(/<\/p>/gi, '<br><br>')
-    .replace(/<\/h[1-6]>/gi, '<br><br>')
-    .replace(/<\/li>/gi, '<br>')
-    .replace(/<\/div>/gi, '<br><br>')
-    .replace(/<!--.*?-->/g, '')
-    .replace(/<\/?[^>]+>/gi, '')
-    .replace(/(<br\s*\/?>\s*){2,}/gi, '<br>')
+    // .replace(/<br\s*\/?>/gi, '<br>')
+    // .replace(/<div.*?>/gi, '<br>')
+    // .replace(/<p.*?>/gi, '<br>')
+    // .replace(/<\/p>/gi, '<br><br>')
+    .replace(/<\/h[1-6]>/gi, '<br>')
+    .replace(/<h[1-6]>/gi, '<br>')
+    // .replace(/<\/li>/gi, '<br>')
+    // .replace(/<\/div>/gi, '<br><br>')
+    // .replace(/<!--.*?-->/g, '')
+    // .replace(/<\/?[^>]+>/gi, '')
+    // .replace(/(<br\s*\/?>\s*){2,}/gi, '<br>')
     .replace(/\s{2,}/g, ' ')
     .trim();
 
   // Replace placeholders with actual links
-  text = text.replace(/\{\{link_(\d+)\}\}/g, (match, index) => {
+   text = text.replace(/\{\{link_(\d+)\}\}/g, (match, index) => {
     const link = links[index];
     return `<a href="${link.url}" target="_blank" rel="noopener noreferrer">${link.linkText}</a>`;
-  });
+   });
+
 
   return text;
 };
@@ -74,6 +76,7 @@ const Article = () => {
 
   // Convert HTML to formatted content
   const formattedContent = stripHtmlTags(articleContent);
+  // const formattedContent = articleContent;
 
   return (
     <div className="article-container">
