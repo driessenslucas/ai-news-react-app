@@ -9,13 +9,6 @@ const PORT = 5600;
 
 app.use(cors()); // Enable CORS for all routes
 
-// // Function to clean HTML content using regex
-// const stripHtmlTags = (html) => {
-//   return html
-//     .replace(/<!--.*?-->/g, '') // Remove comments
-//     .replace(/<\/?[^>]+>/gi, '<br>') // Remove all HTML tags
-//     .replace(/\s{2,}/g, ' ') // Replace multiple spaces with a single space
-// };
 const stripHtmlTags = (html) => {
   let text = html
     // Convert specific HTML tags to <br> for new lines
